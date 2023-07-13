@@ -51,11 +51,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Goodini5.loader.js";
+      var loaderUrl = buildUrl + "/G7.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Goodini5.data.unityweb",
-        frameworkUrl: buildUrl + "/Goodini5.framework.js.unityweb",
-        codeUrl: buildUrl + "/Goodini5.wasm.unityweb",
+        dataUrl: buildUrl + "/G7.data.unityweb",
+        frameworkUrl: buildUrl + "/G7.framework.js.unityweb",
+        codeUrl: buildUrl + "/G7.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "SamMarchenko",
         productName: "GoodiniWebGLTest",
@@ -102,7 +102,7 @@
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
           //fullscreenButton.onclick = () => {
-           // unityInstance.SetFullscreen(1);
+          //  unityInstance.SetFullscreen(1);
           //};
         }).catch((message) => {
           alert(message);
