@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-  <div id="unity-container" style = "position: absolute; width: 100%; height: 100%; left: 0%; top: 0%;">
+    <div id="unity-container" style = "position: absolute; width: 100%; height: 100%; left: 0%; top: 0%;">
       <canvas id="unity-canvas" style = "position: absolute; width: 100%; height: 100%;"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -17,6 +17,11 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">GoodiniWebGLTest</div>
+      </div>
     </div>
     <script>
       var container = document.querySelector("#unity-container");
@@ -51,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Goodini2.loader.js";
+      var loaderUrl = buildUrl + "/Goodini3.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Goodini2.data.unityweb",
-        frameworkUrl: buildUrl + "/Goodini2.framework.js.unityweb",
-        codeUrl: buildUrl + "/Goodini2.wasm.unityweb",
+        dataUrl: buildUrl + "/Goodini3.data.unityweb",
+        frameworkUrl: buildUrl + "/Goodini3.framework.js.unityweb",
+        codeUrl: buildUrl + "/Goodini3.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "SamMarchenko",
         productName: "GoodiniWebGLTest",
@@ -102,7 +107,7 @@
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
           //fullscreenButton.onclick = () => {
-            //unityInstance.SetFullscreen(1);
+          //  unityInstance.SetFullscreen(1);
           //};
         }).catch((message) => {
           alert(message);
